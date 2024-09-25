@@ -1,27 +1,24 @@
-# PokeApiTotvs
+# PokeApi-Totvs
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.6.
+Este projeto foi gerado utilizando a versão 18.0.6 do [Angular CLI](https://github.com/angular/angular-cli). Tem como objetivo consumir a API da [PokéAPI](https://pokeapi.co/) para a visualização de pokémons. Espero que gostem do projeto!!
 
-## Development server
+## Como rodar o projeto
+Primeiro certifique-se que sua máquina possua as seguintes dependências:
+- [NodeJS e NPM](https://nodejs.org/en/download/package-manager/current);
+- [Angular CLI](https://angular.dev/tools/cli/setup-local);
+- [Git](https://git-scm.com/downloads)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Após certificar-se que sua máquina possui essas dependências vamos ao passo a passo:
+1. Faça uma clonagem do projeto utilizando o código ```git clone https://github.com/YuryCSilva/desafioTotvs.git```; 
 
-## Code scaffolding
+2. Após realizar a clonagem, entre dentro da pasta que foi criada e utilize o comando ```npm install```;
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Pronto ao realizar esse passo a passo, você está pronto para rodar o projeto em sua máquina.
+
+## Inicializar servidor
+
+Após passar pelo tópico anterior, você já pode iniciar o servidor em sua máquina e aproveitar o projeto de forma local. Para iniciar o servidor basta abrir um terminal dentro da pasta do projeto e utilizar o seguinte comando ```npm run start```, o projeto está apontando de forma default para a porta 4200, caso deseje que o projeto aponte para outra porta, utilize o comando ```ng serve --port 4202```
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Caso queira realizar o build desse projeto...
