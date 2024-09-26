@@ -1,0 +1,8 @@
+<form class="input-group p-2" [formGroup]="form">
+    <input type="search" class="form-control" formControlName="pokemonPesquisa" placeholder="Digite o nome do pokemon"
+        aria-label="Pesquisar" aria-describedby="search-addon" />
+    <button type="button" class="btn btn-primary px-4" [disabled]="this.form.invalid" (click)="search()"
+        data-mdb-ripple-init>
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+</form>
