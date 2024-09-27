@@ -15,5 +15,6 @@ export class PokemonSubjectService extends SubjectService<PokemonSubject> {
 
 type PokemonSubject = {
     pokemonsList?: BaseClass[],
-    pokemonSelected?: Pokemon,
+    pokemonSelected?: Pokemon | null,
+    pokemonSearch?: string
 };

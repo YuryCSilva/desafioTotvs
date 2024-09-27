@@ -11,7 +11,7 @@ export class PokemonService {
     constructor(private http: HttpClient) {}
 
     getAllPokemons() {
-        return this.http.get<AllPokemonsResponse>("https://pokeapi.co/api/v2/pokemon?limit=151").pipe(
+        return this.http.get<AllPokemonsResponse>("https://pokeapi.co/api/v2/pokemon?limit=1025").pipe(
             mapRXJS(res => res.results.map(pokemon => new BaseClass(pokemon)))
         );
     }
