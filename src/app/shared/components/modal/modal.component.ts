@@ -22,6 +22,11 @@ export class ModalComponent {
 
   open() {
     this.modalInstance = this.modalService.open(this.modalTemplate, { size: this.size });
+
+    this.modalInstance.result.then(
+      () => this.close(),
+      () =>this.close(),
+    );
   }
 
   close() {
