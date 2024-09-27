@@ -1,9 +1,10 @@
 import { Component, ViewChild } from '@angular/core';
 import { ModalComponent } from '../../../../shared/components/modal/modal.component';
 import { Pokemon } from '../../../../shared/classes/pokemon.class';
-import { PokemonSubjectService } from '../../../../services/Subjects/pokemon-subject.service';
+
 import { Subscription } from 'rxjs';
 import { CommonModule } from '@angular/common';
+import { PokemonSubjectService } from '../../../../services/Subjects/pokemon-subject.service';
 
 @Component({
   selector: 'app-modal-pokemon',
@@ -17,17 +18,22 @@ export class ModalPokemonComponent {
   pokemon!: Pokemon | undefined;
   subscription!: Subscription;
 
-  constructor(private PokemonSubjectService: PokemonSubjectService) { }
-
-  open() {
+  constructor(private PokemonSubjectService: PokemonSubjectService) { 
     this.subscription = this.PokemonSubjectService.getState().subscribe(state => {
       if (!state.pokemonSelected) return;
       this.pokemon = state.pokemonSelected;
     });
+  }
+
+  ngOnDestroy() {
+    if (this.subscription) this.subscription.unsubscribe();
+  }
+
+  open() {
     this.modal.open();
   }
 
-  closeCatchEvent() {
-    if (this.subscription) this.subscription.unsubscribe();
+  onClose() {
+    this.PokemonSubjectService.setState({ pokemonSelected: null });
   }
 }

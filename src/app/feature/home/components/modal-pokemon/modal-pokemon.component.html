@@ -1,4 +1,4 @@
-<app-modal #modal title="Detalhe Pokémon" (closeEvent)="closeCatchEvent()" size="md">
+<app-modal #modal title="Detalhe Pokémon" size="md" (closeEvent)="onClose()">
     <div class="text-center">
         <img src="{{pokemon?.getDefaultImageUrl()}}" class="card-img text-center" alt="Imagem do {{pokemon?.getName()}}"
             style="max-width: 512px;" />
