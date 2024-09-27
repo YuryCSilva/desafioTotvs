@@ -8,8 +8,10 @@
             </div>
         </div>
     </header>
-    <router-outlet />
-    <footer class="text-center text-lg-start bg-body-tertiary text-muted fixed-bottom">
+    <section class="container overflow-auto" style="height: calc(100% - 72px - 100px);">
+        <router-outlet />
+    </section>
+    <footer class="text-center text-lg-start bg-light text-muted fixed-bottom" style="height: 72px;">
         <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
             © {{ year }} Copyright:
             <a class="text-reset fw-bold" href="https://github.com/YuryCSilva" target="_blank">Yury Silva</a>
