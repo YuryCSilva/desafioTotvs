@@ -27,6 +27,8 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/assets",
+              "src/web.config",
+              "src/.htaccess",
               {
                 "glob": "**/*",
                 "input": "public"
