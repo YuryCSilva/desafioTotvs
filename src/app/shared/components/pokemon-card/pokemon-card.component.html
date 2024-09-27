@@ -1,0 +1,14 @@
+<div class="card my-4" *ngIf="pokemon" #card>
+    <div class="card-header" (click)="toggleCollapse()" [attr.aria-expanded]="!isCollapsed"
+        aria-controls="pokemonCollapse">
+        <h5 class="card-title text-capitalize">{{pokemon.getName()}}</h5>
+    </div>
+    <div class="card-body" #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+        <img src="{{pokemon.getDefaultImageUrl()}}" class="card-img" alt="Imagem do {{pokemon.getName()}}" />
+        <div class=" d-flex flex-wrap gap-2 my-2">
+            <span class="badge rounded-pill bg-secondary text-capitalize"
+                *ngFor="let type of pokemon.getTypesNames()">{{type}}</span>
+        </div>
+        <button (click)="seeMoreDetailsIsClicked()" class="btn btn-primary">Ver mais detalhes</button>
+    </div>
+</div>
