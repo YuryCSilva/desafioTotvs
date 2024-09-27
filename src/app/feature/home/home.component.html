@@ -1,4 +1,15 @@
-<section class="container">
-    <app-search
-    (pokemonSearchEvent)="onSearch($event)"/>
-</section>
+<div id="pokemon-search" class="d-flex justify-content-center justify-content-md-start">
+    <app-search (pokemonSearchEvent)="onSearch($event)" style="max-width: 600px; width: 100%;" />
+</div>
+
+<div id="pokemon-list">
+    <app-page-with-pagination [listOfItens]="listPokemonsSearch" [isSearched]="isSearched"
+        [collectionSize]="collectionSize" [(page)]="page" (pageChange)="onPageChange($event)" [pageSize]="pageSize" [ariaLabel]="'lista de paginação pokémon'" [maxSize]="6">
+        <ng-container *ngFor="let pokemon of listPokemonsSearch">
+            <app-pokemon-card [pokemon]="pokemon" (seeMoreDetailsEvent)="seeMoreDetailsEvent()"
+                style="max-width: 400px; width: 100%;" />
+        </ng-container>
+    </app-page-with-pagination>
+</div>
+
+<app-modal-pokemon #modalPokemonDetails />
