@@ -9,7 +9,15 @@ export const routes: Routes = [
             {
                 path: '',
                 loadComponent: () => import('./feature/home/home.component').then(m => m.HomeComponent)
-            }
+            },
+            {
+                path: 'pagina-nao-encontrada',
+                loadComponent: () => import('./feature/not-found-page/not-found-page.component').then(m => m.NotFoundPageComponent)
+            },
         ]
+    },
+    {
+        path: '**',
+        redirectTo: 'pagina-nao-encontrada'
     }
 ];
