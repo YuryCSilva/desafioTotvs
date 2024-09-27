@@ -23,7 +23,7 @@ export class SearchComponent extends Form {
   createForm(): void {
     this.form = this.fb.group({
       pokemonPesquisa: new FormControl('', {
-        validators: [Validators.required, Validators.minLength(3), Validators.maxLength(20)],
+        validators: [Validators.required, Validators.minLength(1), Validators.maxLength(20)],
       })
     });
 

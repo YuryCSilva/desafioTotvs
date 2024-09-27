@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { NoResultsComponent } from '../no-results/no-results.component';
 import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -22,6 +22,10 @@ export class PageWithPaginationComponent {
 
   onPageChange(event: any) {
     this.page = event;
+
+    const search = document.getElementById('pokemon-search');
+    if(search) setTimeout(() => search.scrollIntoView({ behavior: 'smooth' }), 100);
+
     this.pageChange.emit(this.page);
   }
 }
