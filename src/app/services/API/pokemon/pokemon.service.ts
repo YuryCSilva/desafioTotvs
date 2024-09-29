@@ -1,8 +1,8 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { map as mapRXJS } from "rxjs";
-import { BaseClass } from "../../shared/classes/base.class";
-import { Pokemon } from "../../shared/classes/pokemon.class";
+import { BaseClass, IBaseClassType } from "../../../shared/classes/base.class";
+import { Pokemon, PokemonTypes } from "../../../shared/classes/pokemon.class";
 
 @Injectable({
     providedIn: "root"
@@ -17,7 +17,7 @@ export class PokemonService {
     }
 
     getPokemon(link: string) {
-        return this.http.get<Pokemon>(link).pipe(
+        return this.http.get<PokemonTypes>(link).pipe(
             mapRXJS(res => new Pokemon(res))
         );
     }
@@ -27,5 +27,5 @@ type AllPokemonsResponse = {
     count: number;
     next: string;
     previous: string;
-    results: BaseClass[];
+    results: IBaseClassType[];
 }
