@@ -3,7 +3,7 @@
         [collectionSize]="collectionSize" [(page)]="page" (pageChange)="onPageChange($event)" [pageSize]="pageSize"
         [ariaLabel]="'lista de paginação pokémon'" [maxSize]="4">
         <ng-container *ngFor="let pokemon of listPokemonsSearch">
-            <app-pokemon-card [pokemon]="pokemon"
+            <app-pokemon-card id="pokemon-card_{{pokemon.getId()}}" [pokemon]="pokemon"
                 style="max-width: 400px; width: 100%;" />
         </ng-container>
     </app-page-with-pagination>

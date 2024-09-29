@@ -2,12 +2,12 @@ import { Component, ViewChild } from '@angular/core';
 import { ModalPokemonComponent } from '../modal-pokemon/modal-pokemon.component';
 import { BaseClass } from '../../../../shared/classes/base.class';
 import { Pokemon } from '../../../../shared/classes/pokemon.class';
-import { PokemonService } from '../../../../services/API/pokemon.service';
 import { PokemonSubjectService } from '../../../../services/Subjects/pokemon-subject.service';
 import { finalize, forkJoin, Subscription } from 'rxjs';
 import { PokemonCardComponent } from '../../../../shared/components/pokemon-card/pokemon-card.component';
 import { CommonModule } from '@angular/common';
 import { PageWithPaginationComponent } from '../../../../shared/components/page-with-pagination/page-with-pagination.component';
+import { PokemonService } from '../../../../services/API/pokemon/pokemon.service';
 
 @Component({
   selector: 'app-container-list-pokemon',
