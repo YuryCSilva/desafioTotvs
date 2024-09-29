@@ -9,9 +9,16 @@ Primeiro certifique-se que sua máquina possua as seguintes dependências:
 - [Git](https://git-scm.com/downloads)
 
 Após certificar-se que sua máquina possui essas dependências vamos ao passo a passo:
-1. Faça uma clonagem do projeto utilizando o código ```git clone https://github.com/YuryCSilva/desafioTotvs.git```; 
+1. Faça uma clonagem do projeto utilizando o código abaixo:
+ ```
+ git clone https://github.com/YuryCSilva/desafioTotvs.git
+ ```
+ 
 
-2. Após realizar a clonagem, entre dentro da pasta que foi criada e utilize o comando ```npm install```;
+2. Após realizar a clonagem, entre dentro da pasta que foi criada e utilize o comando:
+```
+npm install
+```
 
 Pronto ao realizar esse passo a passo, você está pronto para rodar o projeto em sua máquina.
 
@@ -21,4 +28,8 @@ Após passar pelo tópico anterior, você já pode iniciar o servidor em sua má
 
 ## Build
 
-Caso queira realizar o build desse projeto...
+Caso queira realizar o build desse projeto basta utilizar o comando ```npm run build```.
+
+## Visualização do Projeto
+
+Para visualizar o projeto, por favor [clique aqui](https://yurycsilva.github.io/desafioTotvs/).
