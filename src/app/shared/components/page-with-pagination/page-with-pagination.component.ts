@@ -11,8 +11,8 @@ import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
   styleUrl: './page-with-pagination.component.scss'
 })
 export class PageWithPaginationComponent {
-  @Input() listOfItens!: any[];
-  @Input() isSearched!: boolean;
+  @Input() listOfItens: any[] = [];
+  @Input() isSearched: boolean = false;
   @Input() pageSize: number = 10;
   @Input() maxSize: number = 10;
   @Input() ariaLabel: string = '';

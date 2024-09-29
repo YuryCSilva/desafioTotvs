@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NoResultsComponent } from './no-results.component';
+import { provideRouter } from '@angular/router';
+import { routes } from '../../../app.routes';
 
 describe('NoResultsComponent', () => {
   let component: NoResultsComponent;
@@ -8,7 +10,8 @@ describe('NoResultsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NoResultsComponent]
+      imports: [NoResultsComponent],
+      providers: [provideRouter(routes)]
     })
     .compileComponents();
 
