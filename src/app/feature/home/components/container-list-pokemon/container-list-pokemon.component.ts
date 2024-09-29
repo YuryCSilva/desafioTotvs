@@ -31,11 +31,9 @@ export class ContainerListPokemonComponent {
   constructor(private PokemonService: PokemonService, private PokemonSubjectService: PokemonSubjectService
   ) { 
     this.subscription = this.PokemonSubjectService.getState().subscribe(state => {
-      if(state.pokemonsList) this.pokemonsList = state.pokemonsList;
-      if(state.pokemonSelected != undefined) {
-        setTimeout(() => this.modalPokemonDetails.open(), 1)
-      }
       this.havePokemonSelected = state.pokemonSelected != undefined;
+      if(state.pokemonsList) this.pokemonsList = state.pokemonsList;
+      if(state.pokemonSelected != undefined) setTimeout(() => this.modalPokemonDetails.open(), 1)
       if(state.pokemonSearch != undefined) this.onSearch(state.pokemonSearch);
     })
   }
