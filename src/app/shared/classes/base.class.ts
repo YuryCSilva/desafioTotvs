@@ -1,7 +1,7 @@
 export class BaseClass {
     private url: string;
     private name: string;
-    constructor(data: typeof BaseClass.prototype) {
+    constructor(data: {url: string, name: string}) {
         this.url = data.url;
         this.name = data.name;
     }
@@ -21,4 +21,9 @@ export class BaseClass {
     public setUrl(url: string): void {
         this.url = url;
     }
+}
+
+export interface IBaseClassType {
+    name: string,
+    url: string
 }
